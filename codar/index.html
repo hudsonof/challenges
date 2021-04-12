@@ -8,6 +8,7 @@
     <title>Codar.</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b5ac7f4cb.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -32,30 +33,37 @@
 
     <section class="codding">
         <img src="./assets/coding_.png" alt="Codding">
-        <ul>
-            <li>Domínio personalizado</li>
-            <li>Hospedagem</li>
-            <li>Site responsivo</li>
-            <li>Redes sociais</li>
-            <li>Chat online</li>
-            <li>Blog integrado</li>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-check-circle red"></i></span>Domínio personalizado</li>
+            <li><span class="fa-li"><i class="fas fa-check-circle red"></i></span>Hospedagem</li>
+            <li><span class="fa-li"><i class="fas fa-check-circle red"></i></span>Site responsivo</li>
+            <li><span class="fa-li"><i class="fas fa-check-circle red"></i></span>Redes sociais</li>
+            <li><span class="fa-li"><i class="fas fa-check-circle red"></i></span>Chat online</li>
+            <li><span class="fa-li"><i class="fas fa-check-circle red"></i></span>Blog integrado</li>
         </ul>
         <p>Nossa equipe está à disposição!</p>
-        <input type="text" value="" class="phone" />
-        <a href="#">Ligamos para você</a>
+        <input type="text" value="" class="phone" placeholder="Celular" />
+        <a href="#" class="red-button">Ligamos para você</a>
     </section>
 
     <section class="reviews">
         <article>
-            <p>Já tive experiências com outras 4 empresas da área e a Codar é sem sombra de dúvidas superior em todos os
-                aspectos.</p>
-            <h1>Pedro Ferreira</h1>
-            <h2>Construtora Minari</h2>
+            <div class="profile"></div>
+            <div>
+                <p>Já tive experiências com outras 4 empresas da área e a Codar é sem sombra de dúvidas superior em
+                    todos os
+                    aspectos.</p>
+                <h1>Pedro Ferreira</h1>
+                <h2>Construtora Minari</h2>
+            </div>
         </article>
         <article>
-            <p>Processos bem simples e criação de um site exatamente como a minha escola queria!</p>
-            <h1>Maria Rita</h1>
-            <h2>Escola Criança Feliz</h2>
+            <div class="profile"></div>
+            <div>
+                <p>Processos bem simples e criação de um site exatamente como a minha escola queria!</p>
+                <h1>Maria Rita</h1>
+                <h2>Escola Criança Feliz</h2>
+            </div>
         </article>
     </section>
 
@@ -76,6 +84,11 @@
         </div>
         <div>
             <h1>Redes sociais</h1>
+            <div>
+                <i class="fab fa-facebook-square fa-4x"></i>
+                <i class="fab fa-instagram fa-4x"></i>
+                <i class="fab fa-twitter-square fa-4x"></i>
+            </div>
         </div>
     </footer>
 </body>
