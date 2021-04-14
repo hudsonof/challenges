@@ -258,6 +258,7 @@ footer div:last-child i {
     }
     .video-call div {
         height: 100%;
+        margin-left: 100px;
     }
     .video-call img {
         max-width: 300px;
@@ -278,6 +279,23 @@ footer div:last-child i {
     .codding img {
         max-width: 300px;
     }
+    .codding::after {
+        content: "";
+        flex: auto;
+    }
+    .codding p {
+        flex-basis: 100%;
+        margin-left: 100px;
+    }
+    .codding input {
+        flex-basis: 30%;
+        padding: 10px;
+        margin-left: 100px;
+    }
+    .codding a {
+        flex-basis: 30%;
+        margin-left: 20px;
+    }
     .reviews {
         flex-direction: row;
         max-width: 998px;
@@ -291,7 +309,7 @@ footer div:last-child i {
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        padding-top: 50px 0;
+        padding: 100px 0;
     }
     footer div:first-child {
         text-align: left;
