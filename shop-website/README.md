@@ -1,6 +1,6 @@
 <br />
 <p  align="center">
-  Desafio concluído - Preview: [https://hudsonof.github.io/challenges/shop-website/](https://hudsonof.github.io/challenges/shop-website/)
+  Desafio concluído - Preview: https://hudsonof.github.io/challenges/shop-website/
 </p>
 <br />
 <p align="center">
