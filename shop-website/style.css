@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('./assets/background.jpg') center -300px no-repeat, url('./assets/background.jpg');
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1339px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 100%;
+    justify-content: space-between;
+}
+
+header h1 {
+    padding: 15px 10px;
+    background: #e67e34;
+    color: #FFF;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #444;
+}
+
+.fa-shopping-bag {
+    margin: 0 50px;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 15%;
+    height: 100%;
+    min-height: 100%;
+    padding-top: 100px;
+}
+
+.left-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.left-nav ul:first-child li {
+    padding: 10px 0;
+}
+
+.left-nav ul:last-child li a {
+    color: #333;
+    padding: 10px;
+}
+
+.left-nav ul:last-child li:nth-child(1) a:hover {
+    color: #E1306C;
+    padding: 10px;
+}
+
+.left-nav ul:last-child li:nth-child(2) a:hover {
+    color: #1DA1F2;
+}
+
+.left-nav ul:last-child li:nth-child(3) a:hover {
+    color: #4267B2;
+}
+
+.left-nav ul:first-child li a {
+    color: darkgray;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.left-nav ul:first-child li a:hover {
+    color: orangered;
+}
+
+.active {
+    color: orangered !important;
+}
+
+.left-nav ul:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    flex: 1 1 80%;
+    padding-left: 150px;
+}
+
+.product-info h1 {
+    color: #e67e34;
+    font-size: 3rem;
+    word-spacing: 100vw;
+}
+
+.price {
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.prev-box {
+    width: 65px;
+    height: 40px;
+    background: #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+}
+
+.prev-box a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    height: 40px;
+}
+
+.prev-box i {
+    margin-left: -10px;
+}
+
+.prev-box i span {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-left: 30px;
+}
+
+.deslocate-prev {
+    transition: margin 0.8s;
+}
+
+.deslocate-prev span {
+    transition: margin 0.8s;
+}
+
+.prev-box a:hover>.deslocate-prev {
+    margin-left: 5px;
+}
+
+.prev-box a:hover>.deslocate-prev span {
+    margin-left: 5px;
+}
+
+.product-info:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.next-box {
+    width: 65px;
+    height: 40px;
+    background: #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.next-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+    height: 40px;
+}
+
+.deslocate-next {
+    margin-left: 60px;
+    transition: margin 0.8s;
+}
+
+.deslocate-next span {
+    margin-left: -80px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: margin 0.8s;
+}
+
+.next-box a:hover>.deslocate-next {
+    margin-left: 45px;
+}
+
+.next-box a:hover>.deslocate-next span {
+    margin-left: -50px;
+}
+
+.product-sizes {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.product-sizes li {
+    margin-right: 10px;
+}
+
+.product-sizes li label {
+    border: 2px solid #CCC;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.product-sizes li:nth-child(2) label {
+    padding: 5px 7px;
+}
+
+.product-sizes li input[type=radio] {
+    display: none;
+}
+
+.product-sizes li input[type=radio]:checked+label {
+    border: 2px solid orangered;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+    margin: 20px 0;
+}
+
+.number-input, .number-input * {
+    box-sizing: border-box;
+}
+
+.number-input button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #FFF;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input button:before, .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 0.5rem;
+    height: 1.5px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 4rem;
+    padding: .5rem;
+    border-width: 0 2px;
+    font-size: 1rem;
+    height: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-info>a {
+    background: #e67e34;
+    padding: 10px 20px;
+    color: #FFF;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: filter 0.2s;
+}
+
+.product-info>a:hover {
+    filter: brightness(1.1);
+}

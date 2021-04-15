@@ -1,12 +1,87 @@
-shop
-My Account
-Search
-WOMEN
-MEN
-SHOES
-BRAND
-BRAND SWEATSHIRT
-$1000
-PREV
-NEXT
-ADD TO CART
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b5ac7f4cb.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><i class="fas fa-shopping-bag"></i></li>
+                    <li><i class="fas fa-bars"></i></li>
+                </ul>
+            </nav>
+        </header>
+
+        <nav class="left-nav">
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#" class="active">Brand</a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </nav>
+
+        <section class="product">
+            <div class="product-info">
+                <h1>Brand Sweatshirt</h1>
+                <p class="price">$1000</p>
+                <div class="prev-box">
+                    <a href="#">
+                        <i class="fas fa-long-arrow-alt-left deslocate-prev"><span>Prev</span></i>
+                    </a>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="next-box">
+                    <a href="#">
+                        <i class="fas fa-long-arrow-alt-right deslocate-next"><span>Next</span></i>
+                    </a>
+                </div>
+                <ul class="product-sizes">
+                    <li>
+                        <input type="radio" id="size-small" name="size" value="small">
+                        <label for="size-small">S</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="size-medium" name="size" value="medium">
+                        <label for="size-medium">M</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="size-large" name="size" value="large">
+                        <label for="size-large">L</label>
+                    </li>
+                </ul>
+                <div class="number-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        class="plus"></button>
+                </div>
+                <a href="#">Add to Cart</a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
