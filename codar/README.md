@@ -1,6 +1,6 @@
 <br />
 <p  align="center">
-  Desafio concluído - Preview: <a href="https://hudsonof.github.io/challenges/codar/" target="_blank">https://hudsonof.github.io/challenges/codar/</a>
+  Desafio concluído - Preview: [https://hudsonof.github.io/challenges/codar/](https://hudsonof.github.io/challenges/codar/)
 </p>
 <br />
 <p align="center">
