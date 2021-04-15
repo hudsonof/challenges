@@ -1,6 +1,4 @@
-## Índice
+## Desafios concluídos
 
-* [Devchallenge](#devchallenge) 
-* [Desafio](#desafio)
-* [Techs](#techs)
-* [Como começar](#como-começar)
+* [Desafio Codar - DevChallenge.com.br](https://hudsonof.github.io/challenges/codar/)
+* [Desafio Shop_Website - DevChallenge.com.br](https://hudsonof.github.io/challenges/shop-website/)
