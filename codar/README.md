@@ -1,8 +1,9 @@
 <br />
+<p  align="center">
+  Desafio concluído - Preview: <a href="https://hudsonof.github.io/challenges/codar/" target="_blank">https://hudsonof.github.io/challenges/codar/</a>
+</p>
+<br />
 <p align="center">
-  <p  align="center">
-    Desafio concluído - Preview: https://hudsonof.github.io/challenges/codar/
-  </p>
   <a href="http://www.freepik.com">
     <img src="https://i.ibb.co/stqTkc6/video-call.png" alt="Logo" width="250" height="200">
   </a>

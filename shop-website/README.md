@@ -1,9 +1,9 @@
 <br />
+<p  align="center">
+  Desafio concluído - Preview: <a href="https://hudsonof.github.io/challenges/shop-website/" target="_blank">https://hudsonof.github.io/challenges/shop-website/</a>
+</p>
+<br />
 <p align="center">
-  <p  align="center">
-    Desafio concluído - Preview: https://hudsonof.github.io/challenges/shop-website/
-  </p>
-
   <a href="https://www.linkedin.com/in/emmanuel-messias-535621127/">
     <img src="https://i.imgur.com/M4CsV6Q.png" alt="Logo" width="1000">
   </a>
