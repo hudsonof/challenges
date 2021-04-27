@@ -88,6 +88,20 @@
     }
 }
 
+.volume {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+
+    .volumeSlider {
+        flex: 1;
+    }
+}
+
 .controls {
     display: flex;
     align-items: center;

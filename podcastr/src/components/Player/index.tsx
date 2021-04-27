@@ -1,14 +1,19 @@
 import Image from 'next/image';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
 import { useEffect, useRef, useState } from 'react';
+
 import { usePlayer } from '../../contexts/PlayerContext';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
+
+import { ImVolumeMute, ImVolumeLow, ImVolumeMedium, ImVolumeHigh } from 'react-icons/im';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
 import styles from './styles.module.scss';
 
 export function Player() {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [progress, setProgress] = useState(0);
+    const [volume, setVolume] = useState(50);
 
     const {
         episodeList,
@@ -30,12 +35,21 @@ export function Player() {
     const episode = episodeList[currentEpisodeIndex];
 
     useEffect(() => {
+        const podcastrVolume = localStorage.getItem('podcastrVolume');
+
+        if (podcastrVolume) {
+            setVolume(Number(podcastrVolume));
+        }
+    }, []);
+
+    useEffect(() => {
         if (!audioRef.current) {
             return;
         }
 
         if (isPlaying) {
             audioRef.current.play();
+            audioRef.current.volume = (volume / 100);
         } else {
             audioRef.current.pause();
         }
@@ -52,6 +66,14 @@ export function Player() {
     function handleSeek(amount: number) {
         audioRef.current.currentTime = amount;
         setProgress(amount);
+    }
+
+    function handleSeekVolume(volume: number) {
+        setVolume(volume);
+        localStorage.setItem('podcastrVolume', volume.toString());
+        if (audioRef.current) {
+            audioRef.current.volume = (volume / 100)
+        }
     }
 
     function handleEpisodeEnded() {
@@ -117,6 +139,29 @@ export function Player() {
                         onLoadedMetadata={setupProgressListener}
                     />
                 )}
+
+                <div className={styles.volume}>
+                    {volume == 0 ? (
+                        <ImVolumeMute />
+                    ) : volume < 33 ? (
+                        <ImVolumeLow />
+                    ) : volume < 66 ? (
+                        <ImVolumeMedium />
+                    ) : (
+                        <ImVolumeHigh />
+                    )}
+                    <div className={styles.volumeSlider}>
+                        <Slider
+                            max={100}
+                            value={volume}
+                            onChange={handleSeekVolume}
+                            trackStyle={{ backgroundColor: '#04d361' }}
+                            railStyle={{ backgroundColor: '#9f75ff' }}
+                            handleStyle={{ borderColor: '#04d361', borderWidth: 4 }}
+                        />
+                    </div>
+                    <span>{volume}</span>
+                </div>
 
                 <div className={styles.controls}>
                     <button
