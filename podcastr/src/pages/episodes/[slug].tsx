@@ -74,6 +74,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
     const { slug } = ctx.params;
     //const { data } = await api.get(`episodes/${slug}`);
+
+    /* Chama fake da api para deploy no vercel...*/
     const data = require('../../../server.json').episodes.find(o => o.id == slug);
 
     const episode = {

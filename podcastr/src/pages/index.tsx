@@ -125,6 +125,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   });*/
 
+  /* Chama fake da api para deploy no vercel...*/
   const data = require('../../server.json').episodes;
 
   const episodes = data.map(episode => {
