@@ -25,13 +25,17 @@
   
         display: flex;
         align-items: center;
+
+        div:first-child {
+          width: 6rem;
+        }
   
         img {
           width: 6rem;
           height: 6rem;
           border-radius: 1rem;
         }
-  
+
         .episodeDetails {
           flex: 1;
           margin-left: 1rem;
@@ -170,3 +174,27 @@
       }
     }
   }
+
+@media only screen and (max-width: 1670px) {
+    .homepage {
+      height: calc(100vh - 12.5rem);
+    }
+
+    .latestEpisodes {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+  .latestEpisodes {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}

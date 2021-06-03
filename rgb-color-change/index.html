@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Changer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputColor {
+            width: 50px;
+        }
+
+        .showColor {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background: rgb(100, 100, 100);
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#red').val($('#rangeRed').val());
+            $('#green').val($('#rangeGreen').val());
+            $('#blue').val($('#rangeBlue').val());
+
+            let red = 100;
+            let green = 100;
+            let blue = 100;
+
+            $('#rangeRed').change(function () {
+                red = $(this).val();
+                $('#red').val(red);
+                $('div.showColor').css({ backgroundColor: `rgb(${red}, ${green}, ${blue})` });
+            });
+            $('#rangeGreen').change(function () {
+                green = $(this).val();
+                $('#green').val(green);
+                $('div.showColor').css({ backgroundColor: `rgb(${red}, ${green}, ${blue})` });
+            });
+            $('#rangeBlue').change(function () {
+                blue = $(this).val();
+                $('#blue').val(blue);
+                $('div.showColor').css({ backgroundColor: `rgb(${red}, ${green}, ${blue})` });
+            });
+
+            $('#red').change(function () {
+                red = $(this).val();
+                $('#rangeRed').val(red);
+                $('div.showColor').css({ backgroundColor: `rgb(${red}, ${green}, ${blue})` });
+            });
+            $('#green').change(function () {
+                green = $(this).val();
+                $('#rangeGreen').val(green);
+                $('div.showColor').css({ backgroundColor: `rgb(${red}, ${green}, ${blue})` });
+            });
+            $('#blue').change(function () {
+                blue = $(this).val();
+                $('#rangeBlue').val(blue);
+                $('div.showColor').css({ backgroundColor: `rgb(${red}, ${green}, ${blue})` });
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="redContainer">
+            <input type="number" id="red" name="red" min="0" max="255" class="inputColor">
+            <label for="red">(R) Red</label>
+            <input type="range" min="0" max="255" value="100" class="slider" id="rangeRed">
+        </div>
+        <div class="greenContainer">
+            <input type="number" id="green" name="green" min="0" max="255" class="inputColor">
+            <label for="red">(G) Green</label>
+            <input type="range" min="0" max="255" value="100" class="slider" id="rangeGreen">
+        </div>
+        <div class="blueContainer">
+            <input type="number" id="blue" name="blue" min="0" max="255" class="inputColor">
+            <label for="red">(B) Blue</label>
+            <input type="range" min="0" max="255" value="100" class="slider" id="rangeBlue">
+        </div>
+
+        <div class="showColor"></div>
+
+
+    </div>
+
+</body>
+
+</html>

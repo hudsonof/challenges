@@ -89,7 +89,6 @@ export function Player() {
             <header>
                 <img src="/playing.svg" alt="Tocando agora" />
                 <strong>Tocando agora</strong>
-
             </header>
 
             { episode ? (
